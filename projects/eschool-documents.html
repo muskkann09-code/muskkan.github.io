@@ -1,44 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport"content="width=device-width,initial-scale=1">
-  <title>E-School Documents — Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>E-School Documents — Project Details</title>
   <link rel="stylesheet" href="../style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="project-detail">
-    <a href="../index.html">← Back to portfolio</a>
-    <h1>E-School Documents</h1>
-    <p class="muted">PDF viewer app with text search, category & year organization, offline caching and Play Store deployment.</p>
+  <div class="site">
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-content">
+          <div class="brand">
+            <a href="../index.html" class="logo">← Back to Portfolio</a>
+          </div>
+          <div class="nav-actions">
+            <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-    <h3>Key Features</h3>
-    <ul>
-      <li>Category & year-wise document listing</li>
-      <li>In-app PDF viewer with full-text search (custom index)</li>
-      <li>Offline caching using local DB</li>
-      <li>Firebase Storage for document hosting and Firestore metadata</li>
-      <li>FCM notifications for content updates</li>
-    </ul>
+    <main class="project-detail">
+      <div class="container">
+        <a href="../index.html" class="back-link">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M15.833 10H4.16699" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.16699 15L4.16699 10L9.16699 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Back to Portfolio
+        </a>
 
-    <h3>Technical Implementation</h3>
-    <p>UI & navigation built in FlutterFlow. Custom Dart functions parse PDF text to build a searchable index. Firestore stores metadata; Storage holds files. Local DB (cache) ensures offline access. Integrated third-party PDF viewer and optimized rendering for low-end devices.</p>
+        <h1>E-School Documents</h1>
+        <p class="muted">PDF viewer app with text search, category & year organization, offline caching, and Firebase integration.</p>
 
-    <h3>My Role</h3>
-    <p>End-to-end: UI, custom functions, custom widgets, API & Firebase integration, local DB offline logic, FCM, performance tuning, build (AAB) & Play Store deployment, post-release monitoring & fixes.</p>
+        <div class="project-meta">
+          <div class="meta-tags">
+            <span class="tag">FlutterFlow</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">PDF Viewer</span>
+            <span class="tag">Local DB</span>
+            <span class="tag">FCM</span>
+          </div>
+          
+          <a href="https://play.google.com/store/apps/details?id=com.app.generalregister" 
+             target="_blank" class="btn-primary" style="margin-top: 20px;">
+            View on Play Store
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3 20.5V3.5C3 2.91 3.34 2.5 3.78 2.5L15.63 12.33L3.78 22.5C3.34 22.5 3 22.09 3 21.5V20.5ZM17.75 15.75L21.34 17.86L15.64 12.33L17.75 15.75ZM21.34 6.14L17.75 8.25L15.64 11.67L21.34 6.14ZM5.54 2.5L15.64 11.67L12.25 12.33L5.54 2.5Z"/>
+            </svg>
+          </a>
+        </div>
 
-    <h3>Tech Stack</h3>
-    <p class="muted">FlutterFlow · Dart (Custom functions) · Firebase Storage · Cloud Firestore · Local DB · FCM · PDF Viewer</p>
+        <div class="detail-gallery">
+          <img src="../assets/screenshots/eschool-documents/01-home.png" alt="E-School Documents Home Screen">
+          <img src="../assets/screenshots/eschool-documents/02-categories.png" alt="Categories Screen">
+          <img src="../assets/screenshots/eschool-documents/03-pdf-view.png" alt="PDF Viewer">
+          <img src="../assets/screenshots/eschool-documents/04-search.png" alt="Search Functionality">
+        </div>
 
-    <h3>Screenshots</h3>
-    <div class="gallery">
-      <img src="../assets/screenshots/eschool-documents/01-home.png" alt="home">
-      <img src="../assets/screenshots/eschool-documents/02-categories.png" alt="categories">
-      <img src="../assets/screenshots/eschool-documents/03-pdf-view.png" alt="pdf view">
-      <img src="../assets/screenshots/eschool-documents/04-search.png" alt="search">
-    </div>
+        <h2>Project Overview</h2>
+        <p>E-School Documents provides category & year-wise listing of office documents with in-app PDF viewing and full-text search. Built for quick lookup of official documents with minimal permissions and optimized for low-end devices.</p>
 
-    <p style="margin-top:18px"><a href="https://play.google.com/store/apps/details?id=com.app.generalregister" target="_blank" class="btn">Open on Play Store</a></p>
+        <h3>Key Features</h3>
+        <ul>
+          <li>Category-based document browsing with intuitive navigation</li>
+          <li>Year-wise document organization for easy filtering</li>
+          <li>In-app PDF viewer with full-text search capabilities</li>
+          <li>Custom indexing functions for fast text search across documents</li>
+          <li>Offline caching using local database for reduced network calls</li>
+          <li>Firebase Storage for document hosting and Firestore for metadata</li>
+          <li>FCM push notifications for content updates</li>
+          <li>Lightweight UI optimized for fast load times on low-end devices</li>
+        </ul>
+
+        <h3>Technical Implementation</h3>
+        <p><strong>UI & Navigation:</strong> All screens and navigation flows implemented in FlutterFlow with custom widgets for consistent design.</p>
+        <p><strong>Custom Functions:</strong> Wrote Dart functions to parse and index PDF text for fast in-app search. Created custom indexing logic that processes documents in the background.</p>
+        <p><strong>Backend Integration:</strong> Integrated Firebase Storage for document hosting and Cloud Firestore for metadata management. Implemented secure data fetching with error handling.</p>
+        <p><strong>Offline Capabilities:</strong> Implemented local database caching using SQLite patterns for offline access. Documents are cached on first view and available offline.</p>
+        <p><strong>Performance Optimization:</strong> Integrated third-party PDF viewer and optimized rendering for performance. Implemented lazy loading for large document lists.</p>
+
+        <h3>My Role (End-to-End Development)</h3>
+        <ul>
+          <li>Designed and implemented all UI screens and navigation flows using FlutterFlow</li>
+          <li>Wrote Custom Functions (Dart) to parse and index PDF text for fast in-app search</li>
+          <li>Created Custom Widgets for consistent document cards and viewer headers</li>
+          <li>Integrated backend storage (Firebase Storage) and Firestore indexing for metadata</li>
+          <li>Implemented local DB caching for offline access and reduced network calls</li>
+          <li>Added FCM push notifications for content updates and announcements</li>
+          <li>Integrated 3rd-party PDF viewer and optimized rendering for performance</li>
+          <li>Built release bundles (AAB), configured Play Console, signed app, and managed staged rollouts</li>
+          <li>Performed crash monitoring, analytics checks, and post-release bug fixes</li>
+        </ul>
+
+        <h3>Tech Stack Used</h3>
+        <div class="tech-stack">
+          <div class="tech-list">
+            <span class="tech-item">FlutterFlow</span>
+            <span class="tech-item">Dart (Custom Functions)</span>
+            <span class="tech-item">Firebase Storage</span>
+            <span class="tech-item">Cloud Firestore</span>
+            <span class="tech-item">Local DB (SQLite)</span>
+            <span class="tech-item">PDF Viewer Integration</span>
+            <span class="tech-item">FCM</span>
+            <span class="tech-item">Play Console</span>
+          </div>
+        </div>
+
+        <h3>Challenges & Solutions</h3>
+        <p><strong>Challenge:</strong> Implementing efficient text search across large PDF files without affecting app performance.</p>
+        <p><strong>Solution:</strong> Created a custom indexing system that processes PDFs in the background and stores search indexes locally. Implemented incremental indexing for new documents.</p>
+
+        <p><strong>Challenge:</strong> Handling offline access for large document collections.</p>
+        <p><strong>Solution:</strong> Implemented a smart caching system that prioritizes frequently accessed documents and provides partial offline access with clear user feedback.</p>
+
+        <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border-color);">
+          <a href="../index.html" class="btn-secondary">← Back to Portfolio</a>
+          <a href="https://play.google.com/store/apps/details?id=com.app.generalregister" 
+             target="_blank" class="btn-primary" style="margin-left: 20px;">
+            View on Play Store
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <a href="../index.html" class="logo">FlutterFlow Dev</a>
+            <p>Building production-ready mobile apps</p>
+          </div>
+          <div class="footer-copyright">
+            <p>© 2024 Your Name. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
+
   <script src="../script.js"></script>
 </body>
 </html>
