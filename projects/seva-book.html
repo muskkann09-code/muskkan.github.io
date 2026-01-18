@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport"content="width=device-width,initial-scale=1">
+  <title>Seva Book — Project</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="project-detail">
+    <a href="../index.html">← Back to portfolio</a>
+    <h1>Seva Book</h1>
+    <p class="muted">Digital teacher service book for viewing & managing Seva Book entries with offline support.</p>
+
+    <h3>Key Features</h3>
+    <ul>
+      <li>Display teacher/service records in a clean UI</li>
+      <li>Local DB to store records for offline viewing</li>
+      <li>Sync with Firestore when online</li>
+      <li>Push notifications for announcements (FCM)</li>
+      <li>Low-permission, privacy-first design</li>
+    </ul>
+
+    <h3>Technical Implementation</h3>
+    <p>Created reusable custom widgets for record cards in FlutterFlow, custom functions to aggregate and filter history, and offline-first sync logic using a local DB. Integrated Firebase for optional remote sync and used FCM for announcements.</p>
+
+    <h3>My Role</h3>
+    <p>UI & UX design, custom widgets, custom functions, local DB logic & sync, Firebase integration, testing, performance tuning and Play Store deployment.</p>
+
+    <h3>Tech Stack</h3>
+    <p class="muted">FlutterFlow · Firestore · Local DB · FCM · Dart Custom Functions</p>
+
+    <h3>Screenshots</h3>
+    <div class="gallery">
+      <img src="../assets/screenshots/seva-book/01-home.png" alt="home">
+      <img src="../assets/screenshots/seva-book/02-records.png" alt="records">
+    </div>
+
+    <p style="margin-top:18px"><a href="https://play.google.com/store/apps/details?id=com.tsm.bookseva" target="_blank" class="btn">Open on Play Store</a></p>
+  </div>
+  <script src="../script.js"></script>
+</body>
+</html>
