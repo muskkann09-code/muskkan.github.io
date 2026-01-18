@@ -1,0 +1,112 @@
+:root {
+  --bg: #0b0d10;
+  --card: rgba(255,255,255,0.06);
+  --text: #ffffff;
+  --muted: #a1a1aa;
+  --accent: #6ee7b7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  background: white;
+  color: black;
+  text-decoration: none;
+}
+
+.secondary {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.projects {
+  display: grid;
+  gap: 24px;
+}
+
+.project-card {
+  background: var(--card);
+  border-radius: 22px;
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255,255,255,0.1);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CONTACT FORM */
+form {
+  display: grid;
+  gap: 12px;
+  max-width: 500px;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #1e1e1e;
+  color: white;
+}
+
+button {
+  padding: 12px;
+  border-radius: 20px;
+  background: white;
+  color: black;
+  border: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
