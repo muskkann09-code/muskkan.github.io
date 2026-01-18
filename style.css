@@ -1,4 +1,117 @@
-/* ================= VARIABLES ================= */
+/* ===== Variables (both themes) ===== */
+:root{
+  --bg: #0b0d10;
+  --bg-soft: linear-gradient(180deg, rgba(20,22,24,0.85), rgba(8,9,11,1));
+  --card: rgba(255,255,255,0.06);
+  --muted: #9aa0a6;
+  --text: #ffffff;
+  --accent: #6ee7b7;
+  --glass-border: rgba(255,255,255,0.06);
+  --shadow: 0 8px 30px rgba(0,0,0,0.6);
+  --glass-blur: blur(12px);
+}
+
+/* Light theme override */
+:root[data-theme="light"]{
+  --bg: #f7f8fa;
+  --bg-soft: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(245,246,248,1));
+  --card: rgba(10,10,10,0.03);
+  --muted: #6b7280;
+  --text: #0b0d10;
+  --accent: #0b7285;
+  --glass-border: rgba(0,0,0,0.06);
+  --shadow: 0 10px 30px rgba(12,14,18,0.06);
+}
+
+/* ===== Reset ===== */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.6;
+}
+
+/* Container */
+.container{max-width:1100px;margin:0 auto;padding:60px 24px}
+
+/* Top bar */
+.topbar{
+  display:flex;justify-content:space-between;align-items:center;padding:20px 24px;
+  position:sticky;top:0;background:transparent;z-index:50;
+}
+.topbar .brand a{color:var(--text);font-weight:700;text-decoration:none}
+.nav-actions{display:flex;gap:12px;align-items:center}
+
+/* Theme toggle button */
+#theme-toggle{
+  background:transparent;border:1px solid var(--glass-border);padding:8px;border-radius:10px;cursor:pointer;color:var(--text);
+  backdrop-filter:var(--glass-blur);box-shadow:var(--shadow)
+}
+
+/* Hero */
+.hero{min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 24px;background:var(--bg-soft)}
+.hero-inner{max-width:880px}
+.hero h1{font-size:3.4rem;margin-bottom:12px;letter-spacing:-0.02em}
+.hero .muted{color:var(--muted);margin-bottom:20px}
+.cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.btn{
+  display:inline-block;padding:12px 22px;border-radius:999px;background:var(--text);color:var(--bg);text-decoration:none;font-weight:600;box-shadow:var(--shadow);
+}
+.btn.outline{background:transparent;border:1px solid var(--glass-border);color:var(--text)}
+
+/* Sections */
+section h2{font-size:1.6rem;margin-bottom:12px}
+section p.muted{color:var(--muted)}
+
+/* Projects grid */
+.project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:18px}
+.project-card{
+  background:var(--card);border-radius:18px;padding:18px;display:flex;gap:14px;align-items:flex-start;
+  border:1px solid var(--glass-border);backdrop-filter:var(--glass-blur);transition:transform .35s ease,box-shadow .35s ease;
+}
+.project-card:hover{transform:translateY(-10px);box-shadow:0 14px 40px rgba(0,0,0,0.45)}
+.project-thumb{width:120px;height:80px;object-fit:cover;border-radius:12px;border:1px solid rgba(255,255,255,0.04)}
+.project-content h3{margin:0 0 6px 0}
+.project-content p{margin:0;color:var(--muted)}
+.project-links{margin-top:10px;display:flex;gap:12px}
+
+/* Stack */
+.stack p{color:var(--muted);margin-top:8px}
+
+/* Contact form */
+.contact-form{max-width:620px;display:grid;gap:12px}
+.contact-form input,.contact-form textarea{
+  padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)
+}
+.contact-form button{padding:12px;border-radius:12px;border:none;background:var(--text);color:var(--bg);font-weight:600}
+
+/* Footer */
+.footer{padding:30px 24px;text-align:center;color:var(--muted)}
+
+/* Reveal animations (used by script.js) */
+.reveal{opacity:0;transform:translateY(28px);transition:all .9s cubic-bezier(.2,.9,.2,1)}
+.reveal.active{opacity:1;transform:none}
+
+/* Project detail page specific */
+.project-detail{
+  padding:60px 24px;max-width:1000px;margin:40px auto;background:transparent;
+}
+.project-detail .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:20px}
+.project-detail img{width:100%;border-radius:12px;object-fit:cover;border:1px solid var(--glass-border);}
+
+/* Responsive */
+@media (max-width:800px){
+  .hero h1{font-size:2.2rem}
+  .project-thumb{display:none}
+  .container{padding:36px 18px}
+}
+
+
+/* /* ================= VARIABLES ================= */
 :root {
   --bg-dark: #0b0d10;
   --card-bg: rgba(255, 255, 255, 0.06);
@@ -144,4 +257,4 @@ button {
   .hero h1 {
     font-size: 2.4rem;
   }
-}
+} */
