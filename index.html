@@ -1,215 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>FlutterFlow Developer</title>
-
-  <meta name="description" content="FlutterFlow Developer — Production Android Apps"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-<header class="nav">
-  <a class="logo" href="#">FlutterFlow Dev</a>
-  <div class="nav-actions">
-    <button id="theme-toggle">🌙</button>
-    <a href="assets/resume.pdf" class="pill">Resume</a>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero reveal">
-  <h1>
-    I build <span>production FlutterFlow apps</span><br/>
-    from idea to Play Store
-  </h1>
-  <p>
-    UI · Custom Functions · APIs · Firebase · Offline DB · FCM · Deployments
-  </p>
-
-  <div class="hero-cta">
-    <a href="#projects" class="btn">View Projects</a>
-    <a href="#contact" class="btn ghost">Contact</a>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="section reveal">
-  <h2>About</h2>
-  <p class="text">
-    I’m a FlutterFlow Developer who builds, ships and maintains production Android apps.
-    This portfolio demonstrates end-to-end work — UI → logic → backend → deployment.
-  </p>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="section reveal">
-  <h2>Selected Projects</h2>
-
-  <div class="grid">
-
-    <article class="card">
-      <img src="assets/screenshots/eschool-documents/01-home.png">
-      <h3>E-School Documents</h3>
-      <p>PDF viewer, search, offline caching, Firebase</p>
-      <a href="projects/eschool-documents.html">View →</a>
-    </article>
-
-    <article class="card">
-      <img src="assets/screenshots/seva-book/01-home.png">
-      <h3>Seva Book</h3>
-      <p>Teacher records, local DB & Firebase</p>
-      <a href="projects/seva-book.html">View →</a>
-    </article>
-
-    <article class="card">
-      <img src="assets/screenshots/digital-gram/01-home.png">
-      <h3>Digital Gram</h3>
-      <p>Document categories & instant search</p>
-      <a href="projects/digital-gram.html">View →</a>
-    </article>
-
-    <article class="card">
-      <img src="assets/screenshots/mist-migration/01-student-list.png">
-      <h3>MIST Migration</h3>
-      <p>Attendance, reports, offline sync</p>
-      <a href="projects/mist-migration.html">View →</a>
-    </article>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section reveal">
-  <h2>Contact</h2>
-
-  <form class="contact">
-    <input placeholder="Name" required>
-    <input placeholder="Email" type="email" required>
-    <textarea placeholder="Message"></textarea>
-    <button class="btn">Send</button>
-  </form>
-</section>
-
-<footer class="footer">
-  © 2026 • FlutterFlow Developer • India
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FlutterFlow Developer — Portfolio</title>
-  <meta name="description" content="FlutterFlow Developer — UI, custom functions, APIs, Firebase, offline DB, FCM, Play Store deployments" />
-
+  <title>FlutterFlow Developer — Production Apps & API Integration</title>
+  <meta name="description" content="FlutterFlow Developer — API integrations, custom functions, Firebase, Play Store deployments, end-to-end app development" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <meta property="og:title" content="FlutterFlow Developer Portfolio" />
-  <meta property="og:description" content="Production FlutterFlow apps on Google Play — UI, custom functions, Firebase, API integrations, deployments." />
-  <!-- Replace preview.png with your image path -->
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="FlutterFlow Developer — Production Apps & API Integration" />
+  <meta property="og:description" content="Production FlutterFlow apps on Google Play — REST API integrations, custom functions, Firebase, end-to-end deployments." />
   <meta property="og:image" content="assets/preview.png" />
+  <meta property="og:url" content="https://yourusername.github.io/" />
+  <meta property="og:type" content="website" />
 </head>
 <body>
   <div class="site">
-    <!-- top bar -->
-    <nav class="topbar">
-      <div class="brand">
-        <a href="/">Your Name</a>
-      </div>
-
-      <div class="nav-actions">
-        <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
-        <a class="btn small" href="assets/resume.pdf" download>Download Resume</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-content">
+          <div class="brand">
+            <a href="/" class="logo">FlutterFlow Dev</a>
+          </div>
+          
+          <div class="nav-links">
+            <a href="#projects">Projects</a>
+            <a href="#api">API Work</a>
+            <a href="#deployment">Deployments</a>
+            <a href="#contact">Contact</a>
+          </div>
+          
+          <div class="nav-actions">
+            <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+            <a class="btn-nav" href="assets/resume.pdf" download>Resume</a>
+          </div>
+        </div>
       </div>
     </nav>
 
-    <!-- HERO -->
-    <header class="hero reveal">
-      <div class="hero-inner">
-        <h1>FlutterFlow Developer</h1>
-        <p class="muted">UI • Custom Functions • Custom Widgets • API Integrations • Firebase • FCM • Deployments</p>
-
-        <div class="cta">
-          <a class="btn" href="#projects">View Projects</a>
-          <a class="btn outline" href="#contact">Contact</a>
+    <!-- HERO SECTION -->
+    <header class="hero">
+      <div class="container">
+        <div class="hero-content reveal">
+          <div class="hero-text">
+            <h1 class="hero-title">
+              FlutterFlow Developer: <span class="highlight">APIs & Deployments</span>
+            </h1>
+            <p class="hero-subtitle">
+              I build production-ready mobile apps with comprehensive API integrations and handle end-to-end Play Store deployments. Specialized in connecting FlutterFlow apps with REST APIs, Firebase, and third-party services.
+            </p>
+            
+            <div class="expertise-badges">
+              <span class="badge">REST API Integration</span>
+              <span class="badge">Firebase Services</span>
+              <span class="badge">Play Store Deployments</span>
+              <span class="badge">Custom Functions</span>
+            </div>
+            
+            <div class="hero-buttons">
+              <a href="#projects" class="btn-primary">
+                View Projects
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M4.16699 10H15.8337" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10.833 15L15.833 10L10.833 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a href="#api" class="btn-secondary">
+                View API Work
+              </a>
+            </div>
+            
+            <div class="hero-stats">
+              <div class="stat">
+                <span class="stat-number">4+</span>
+                <span class="stat-label">Production Apps</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">API Integrations</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Deployment Success</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="hero-visual">
+            <div class="floating-card">
+              <div class="card-content">
+                <div class="app-badge">🚀</div>
+                <h4>API & Deployment Expert</h4>
+                <p>REST APIs • Firebase • Play Store</p>
+                <div class="card-stats">
+                  <div class="mini-stat">
+                    <span class="mini-number">4</span>
+                    <span class="mini-label">Live Apps</span>
+                  </div>
+                  <div class="mini-stat">
+                    <span class="mini-number">End-to-End</span>
+                    <span class="mini-label">Deployments</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
         </div>
       </div>
     </header>
 
-    <!-- ABOUT -->
-    <section id="about" class="about reveal">
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section projects">
       <div class="container">
-        <h2>About Me</h2>
-        <p>I build and ship production FlutterFlow apps — I design UI, write custom functions and widgets, integrate REST APIs, implement Firebase (Auth / Firestore / Storage), handle local DB/offline sync, configure push notifications (FCM), and perform Play Store builds & deployments.</p>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="projects reveal">
-      <div class="container">
-        <h2>Projects</h2>
-
-        <div class="project-grid">
-          <!-- E-School Documents -->
-          <article class="project-card">
-            <img src="assets/screenshots/eschool-documents/01-home.png" alt="E-School Documents screenshot" class="project-thumb" />
+        <div class="section-header">
+          <h2 class="section-title">Production Projects</h2>
+          <p class="section-subtitle">Live apps on Google Play Store with comprehensive API integrations</p>
+        </div>
+        
+        <div class="projects-grid">
+          <!-- Project 1: E-School Documents -->
+          <article class="project-card reveal">
+            <div class="project-image">
+              <img src="assets/screenshots/eschool-documents/01-home.png" alt="E-School Documents App" />
+              <div class="project-overlay">
+                <a href="projects/eschool-documents.html" class="view-details">View Details</a>
+              </div>
+            </div>
             <div class="project-content">
-              <h3>E-School Documents</h3>
-              <p class="muted">PDF viewer + full-text search, offline caching, Firebase</p>
+              <div class="project-tags">
+                <span class="tag">FlutterFlow</span>
+                <span class="tag">REST API</span>
+                <span class="tag">Firebase</span>
+                <span class="tag">Deployment</span>
+              </div>
+              <h3 class="project-title">E-School Documents</h3>
+              <p class="project-description">
+                PDF viewer with REST API integration for document metadata, Firebase for storage, and complete Play Store deployment.
+              </p>
               <div class="project-links">
-                <a href="projects/eschool-documents.html" class="link">Details →</a>
-                <a href="https://play.google.com/store/apps/details?id=com.app.generalregister" target="_blank" class="link">Play Store</a>
+                <a href="projects/eschool-documents.html" class="project-link">
+                  View API Integration
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M3.33301 8H12.6663" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.66699 12L12.667 8L8.66699 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.app.generalregister" 
+                   target="_blank" class="play-store-link">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3 20.5V3.5C3 2.91 3.34 2.5 3.78 2.5L15.63 12.33L3.78 22.5C3.34 22.5 3 22.09 3 21.5V20.5ZM17.75 15.75L21.34 17.86L15.64 12.33L17.75 15.75ZM21.34 6.14L17.75 8.25L15.64 11.67L21.34 6.14ZM5.54 2.5L15.64 11.67L12.25 12.33L5.54 2.5Z"/>
+                  </svg>
+                  Play Store
+                </a>
               </div>
             </div>
           </article>
 
-          <!-- Seva Book -->
-          <article class="project-card">
-            <img src="assets/screenshots/seva-book/01-home.png" alt="Seva Book screenshot" class="project-thumb" />
+          <!-- Project 2: Seva Book -->
+          <article class="project-card reveal">
+            <div class="project-image">
+              <img src="assets/screenshots/seva-book/01-home.png" alt="Seva Book App" />
+              <div class="project-overlay">
+                <a href="projects/seva-book.html" class="view-details">View Details</a>
+              </div>
+            </div>
             <div class="project-content">
-              <h3>Seva Book</h3>
-              <p class="muted">Teacher records app — local DB & Firebase integration</p>
+              <div class="project-tags">
+                <span class="tag">FlutterFlow</span>
+                <span class="tag">API Sync</span>
+                <span class="tag">Firestore</span>
+                <span class="tag">Deployment</span>
+              </div>
+              <h3 class="project-title">Seva Book</h3>
+              <p class="project-description">
+                Teacher records app with REST API integration for data synchronization and complete Play Store deployment.
+              </p>
               <div class="project-links">
-                <a href="projects/seva-book.html" class="link">Details →</a>
-                <a href="https://play.google.com/store/apps/details?id=com.tsm.bookseva" target="_blank" class="link">Play Store</a>
+                <a href="projects/seva-book.html" class="project-link">
+                  View API Integration
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M3.33301 8H12.6663" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.66699 12L12.667 8L8.66699 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.tsm.bookseva" 
+                   target="_blank" class="play-store-link">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3 20.5V3.5C3 2.91 3.34 2.5 3.78 2.5L15.63 12.33L3.78 22.5C3.34 22.5 3 22.09 3 21.5V20.5ZM17.75 15.75L21.34 17.86L15.64 12.33L17.75 15.75ZM21.34 6.14L17.75 8.25L15.64 11.67L21.34 6.14ZM5.54 2.5L15.64 11.67L12.25 12.33L5.54 2.5Z"/>
+                  </svg>
+                  Play Store
+                </a>
               </div>
             </div>
           </article>
 
-          <!-- Digital Gram -->
-          <article class="project-card">
-            <img src="assets/screenshots/digital-gram/01-home.png" alt="Digital Gram screenshot" class="project-thumb" />
+          <!-- Project 3: Digital Gram -->
+          <article class="project-card reveal">
+            <div class="project-image">
+              <img src="assets/screenshots/digital-gram/01-home.png" alt="Digital Gram App" />
+              <div class="project-overlay">
+                <a href="projects/digital-gram.html" class="view-details">View Details</a>
+              </div>
+            </div>
             <div class="project-content">
-              <h3>Digital Gram</h3>
-              <p class="muted">Category-based documents with in-app search & viewer</p>
+              <div class="project-tags">
+                <span class="tag">FlutterFlow</span>
+                <span class="tag">REST API</span>
+                <span class="tag">Search API</span>
+                <span class="tag">Deployment</span>
+              </div>
+              <h3 class="project-title">Digital Gram</h3>
+              <p class="project-description">
+                Document management with REST API integration for content and complete Play Store deployment.
+              </p>
               <div class="project-links">
-                <a href="projects/digital-gram.html" class="link">Details →</a>
-                <a href="https://play.google.com/store/apps/details?id=com.tsm.digitalgram" target="_blank" class="link">Play Store</a>
+                <a href="projects/digital-gram.html" class="project-link">
+                  View API Integration
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M3.33301 8H12.6663" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.66699 12L12.667 8L8.66699 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.tsm.digitalgram" 
+                   target="_blank" class="play-store-link">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3 20.5V3.5C3 2.91 3.34 2.5 3.78 2.5L15.63 12.33L3.78 22.5C3.34 22.5 3 22.09 3 21.5V20.5ZM17.75 15.75L21.34 17.86L15.64 12.33L17.75 15.75ZM21.34 6.14L17.75 8.25L15.64 11.67L21.34 6.14ZM5.54 2.5L15.64 11.67L12.25 12.33L5.54 2.5Z"/>
+                  </svg>
+                  Play Store
+                </a>
               </div>
             </div>
           </article>
 
-          <!-- MIST -->
-          <article class="project-card">
-            <img src="assets/screenshots/mist-migration/01-student-list.png" alt="MIST screenshot" class="project-thumb" />
+          <!-- Project 4: MIST Migration -->
+          <article class="project-card reveal">
+            <div class="project-image">
+              <img src="assets/screenshots/mist-migration/01-student-list.png" alt="MIST Migration App" />
+              <div class="project-overlay">
+                <a href="projects/mist-migration.html" class="view-details">View Details</a>
+              </div>
+            </div>
             <div class="project-content">
-              <h3>MIST — Migration Students</h3>
-              <p class="muted">Student attendance, reporting, offline capture</p>
+              <div class="project-tags">
+                <span class="tag">FlutterFlow</span>
+                <span class="tag">API Integration</span>
+                <span class="tag">Reporting API</span>
+                <span class="tag">Deployment</span>
+              </div>
+              <h3 class="project-title">MIST Migration</h3>
+              <p class="project-description">
+                Student management system with REST API integration for data and complete Play Store deployment.
+              </p>
               <div class="project-links">
-                <a href="projects/mist-migration.html" class="link">Details →</a>
-                <a href="https://play.google.com/store/apps/details?id=com.tsm.migrationkolhapur" target="_blank" class="link">Play Store</a>
+                <a href="projects/mist-migration.html" class="project-link">
+                  View API Integration
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M3.33301 8H12.6663" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.66699 12L12.667 8L8.66699 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.tsm.migrationkolhapur" 
+                   target="_blank" class="play-store-link">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3 20.5V3.5C3 2.91 3.34 2.5 3.78 2.5L15.63 12.33L3.78 22.5C3.34 22.5 3 22.09 3 21.5V20.5ZM17.75 15.75L21.34 17.86L15.64 12.33L17.75 15.75ZM21.34 6.14L17.75 8.25L15.64 11.67L21.34 6.14ZM5.54 2.5L15.64 11.67L12.25 12.33L5.54 2.5Z"/>
+                  </svg>
+                  Play Store
+                </a>
               </div>
             </div>
           </article>
@@ -217,36 +287,274 @@
       </div>
     </section>
 
-    <!-- TECH STACK -->
-    <section class="stack reveal">
+    <!-- API INTEGRATION SECTION -->
+    <section id="api" class="section api-integration">
       <div class="container">
-        <h2>Tech Stack</h2>
-        <p class="muted">FlutterFlow · Dart · Firebase (Auth, Firestore, Storage) · REST APIs · Local DB · FCM · AAB/APK & Play Console</p>
+        <div class="section-header">
+          <h2 class="section-title">API Integration Expertise</h2>
+          <p class="section-subtitle">Comprehensive REST API integration across all production apps</p>
+        </div>
+        
+        <div class="api-content">
+          <div class="api-list reveal">
+            <div class="api-item">
+              <div class="api-icon">🔗</div>
+              <h3>REST API Integration</h3>
+              <p>Integrated REST APIs for all apps including GET/POST endpoints, authentication, and data synchronization.</p>
+            </div>
+            
+            <div class="api-item">
+              <div class="api-icon">🔐</div>
+              <h3>Secure Authentication</h3>
+              <p>Implemented OAuth, JWT tokens, and secure API authentication flows for user data protection.</p>
+            </div>
+            
+            <div class="api-item">
+              <div class="api-icon">📡</div>
+              <h3>Real-time Sync</h3>
+              <p>Built API synchronization systems with local databases for offline-first architecture.</p>
+            </div>
+            
+            <div class="api-item">
+              <div class="api-icon">⚡</div>
+              <h3>Performance Optimization</h3>
+              <p>Optimized API calls with caching, batch requests, and efficient error handling.</p>
+            </div>
+          </div>
+          
+          <div class="api-technologies reveal">
+            <h3>API Technologies Used</h3>
+            <div class="tech-grid">
+              <div class="tech-card">
+                <h4>HTTP Methods</h4>
+                <p>GET, POST, PUT, DELETE, PATCH</p>
+              </div>
+              <div class="tech-card">
+                <h4>Authentication</h4>
+                <p>Bearer Tokens, OAuth 2.0, API Keys</p>
+              </div>
+              <div class="tech-card">
+                <h4>Data Formats</h4>
+                <p>JSON, Form Data, Multipart</p>
+              </div>
+              <div class="tech-card">
+                <h4>Error Handling</h4>
+                <p>HTTP Status Codes, Retry Logic</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="contact reveal">
+    <!-- DEPLOYMENT SECTION -->
+    <section id="deployment" class="section deployment">
       <div class="container">
-        <h2>Contact</h2>
-
-        <!-- Replace formspree endpoint with your form endpoint -->
-        <form class="contact-form" action="https://formspree.io/f/xyzabcde" method="POST">
-          <label><input type="text" name="name" placeholder="Your name" required></label>
-          <label><input type="email" name="email" placeholder="Your email" required></label>
-          <label><textarea name="message" rows="6" placeholder="How can I help?" required></textarea></label>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
+        <div class="section-header">
+          <h2 class="section-title">Deployment Process</h2>
+          <p class="section-subtitle">End-to-end Play Store deployment and management</p>
+        </div>
+        
+        <div class="deployment-process">
+          <div class="process-step reveal">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>App Bundle Creation</h3>
+              <p>Build AAB/APK files with proper signing and optimization for production release.</p>
+            </div>
+          </div>
+          
+          <div class="process-step reveal">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Play Console Setup</h3>
+              <p>Configure store listings, pricing, content rating, and app content.</p>
+            </div>
+          </div>
+          
+          <div class="process-step reveal">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Release Management</h3>
+              <p>Manage internal testing, closed testing, open testing, and production releases.</p>
+            </div>
+          </div>
+          
+          <div class="process-step reveal">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Post-Deployment</h3>
+              <p>Monitor crash reports, user feedback, analytics, and push updates.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text reveal">
+            <h2 class="section-title">API & Deployment Specialist</h2>
+            <p class="about-description">
+              I specialize in connecting FlutterFlow apps with REST APIs and managing complete Play Store deployments. Every app I've built includes comprehensive API integration and has been successfully deployed to production.
+            </p>
+            
+            <div class="expertise">
+              <h3>API Integration Capabilities:</h3>
+              <ul class="expertise-list">
+                <li><strong>REST API Integration:</strong> GET/POST requests, authentication, error handling</li>
+                <li><strong>Third-party APIs:</strong> Payment gateways, SMS services, cloud storage</li>
+                <li><strong>Firebase Integration:</strong> Auth, Firestore, Storage, FCM</li>
+                <li><strong>Custom Backend Connectivity:</strong> Node.js, Python, PHP APIs</li>
+                <li><strong>Webhook Implementation:</strong> Real-time data updates and notifications</li>
+              </ul>
+              
+              <h3>Deployment Experience:</h3>
+              <ul class="expertise-list">
+                <li><strong>Play Store Deployments:</strong> 4+ production apps published</li>
+                <li><strong>App Bundle Creation:</strong> AAB/APK building and signing</li>
+                <li><strong>Release Management:</strong> Staged rollouts and version control</li>
+                <li><strong>Post-Deployment:</strong> Crash monitoring, updates, maintenance</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="about-visual reveal">
+            <div class="tech-stack">
+              <h3>Technical Stack</h3>
+              <div class="tech-list">
+                <span class="tech-item">FlutterFlow</span>
+                <span class="tech-item">Dart</span>
+                <span class="tech-item">REST APIs</span>
+                <span class="tech-item">Firebase</span>
+                <span class="tech-item">JSON</span>
+                <span class="tech-item">OAuth</span>
+                <span class="tech-item">Play Console</span>
+                <span class="tech-item">GitHub</span>
+                <span class="tech-item">Android Studio</span>
+                <span class="tech-item">Postman</span>
+                <span class="tech-item">Local DB</span>
+              </div>
+            </div>
+            
+            <div class="experience-card">
+              <div class="exp-icon">🚀</div>
+              <h4>Production Deployment Stats</h4>
+              <ul>
+                <li>4+ apps deployed to Play Store</li>
+                <li>10+ API integrations completed</li>
+                <li>100% deployment success rate</li>
+                <li>End-to-end release management</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Get in Touch</h2>
+          <p class="section-subtitle">Need API integration or deployment help? Let's talk</p>
+        </div>
+        
+        <div class="contact-content">
+          <div class="contact-info reveal">
+            <h3>API & Deployment Projects</h3>
+            <p>
+              I can help with your FlutterFlow app's API integration, Play Store deployment, or complete end-to-end development.
+            </p>
+            
+            <div class="contact-details">
+              <a href="mailto:hello@example.com" class="contact-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"/>
+                </svg>
+                hello@example.com
+              </a>
+            </div>
+            
+            <div class="project-types">
+              <h4>I can help with:</h4>
+              <ul>
+                <li>REST API Integration</li>
+                <li>Firebase Setup</li>
+                <li>Play Store Deployment</li>
+                <li>End-to-End App Development</li>
+              </ul>
+            </div>
+          </div>
+          
+          <form class="contact-form reveal" action="https://formspree.io/f/xyzabcde" method="POST">
+            <input type="hidden" name="subject" value="New Project Inquiry - API/Deployment">
+            
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Your email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="project-type">Project Type</label>
+              <select id="project-type" name="project-type">
+                <option value="api-integration">API Integration</option>
+                <option value="deployment">Play Store Deployment</option>
+                <option value="full-development">Full App Development</option>
+                <option value="consultation">Technical Consultation</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Project Details</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, API needs, and deployment requirements..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn-primary">
+              Send Message
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M4.16699 10H15.8337" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10.833 15L15.833 10L10.833 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer class="footer">
       <div class="container">
-        <p class="muted">© Your Name • <a href="https://github.com/yourusername" target="_blank">GitHub</a> • <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></p>
+        <div class="footer-content">
+          <div class="footer-brand">
+            <a href="/" class="logo">FlutterFlow Dev</a>
+            <p>API Integration & Play Store Deployment Specialist</p>
+          </div>
+          
+          <div class="footer-links">
+            <a href="#projects">Projects</a>
+            <a href="#api">API Work</a>
+            <a href="#deployment">Deployments</a>
+            <a href="#contact">Contact</a>
+            <a href="assets/resume.pdf" download>Resume</a>
+          </div>
+          
+          <div class="footer-copyright">
+            <p>© 2024 Your Name. All rights reserved.</p>
+            <p class="footer-note">All apps include API integration and Play Store deployment</p>
+          </div>
+        </div>
       </div>
     </footer>
   </div>
 
   <script src="script.js"></script>
 </body>
-</html> -->
+</html>
