@@ -1,42 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport"content="width=device-width,initial-scale=1">
-  <title>Seva Book — Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seva Book — Project Details</title>
   <link rel="stylesheet" href="../style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="project-detail">
-    <a href="../index.html">← Back to portfolio</a>
-    <h1>Seva Book</h1>
-    <p class="muted">Digital teacher service book for viewing & managing Seva Book entries with offline support.</p>
+  <div class="site">
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-content">
+          <div class="brand">
+            <a href="../index.html" class="logo">← Back to Portfolio</a>
+          </div>
+          <div class="nav-actions">
+            <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-    <h3>Key Features</h3>
-    <ul>
-      <li>Display teacher/service records in a clean UI</li>
-      <li>Local DB to store records for offline viewing</li>
-      <li>Sync with Firestore when online</li>
-      <li>Push notifications for announcements (FCM)</li>
-      <li>Low-permission, privacy-first design</li>
-    </ul>
+    <main class="project-detail">
+      <div class="container">
+        <a href="../index.html" class="back-link">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M15.833 10H4.16699" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.16699 15L4.16699 10L9.16699 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Back to Portfolio
+        </a>
 
-    <h3>Technical Implementation</h3>
-    <p>Created reusable custom widgets for record cards in FlutterFlow, custom functions to aggregate and filter history, and offline-first sync logic using a local DB. Integrated Firebase for optional remote sync and used FCM for announcements.</p>
+        <h1>Seva Book</h1>
+        <p class="muted">Digital teacher service book for viewing & managing Seva Book entries with offline support and Firebase sync.</p>
 
-    <h3>My Role</h3>
-    <p>UI & UX design, custom widgets, custom functions, local DB logic & sync, Firebase integration, testing, performance tuning and Play Store deployment.</p>
+        <div class="project-meta">
+          <div class="meta-tags">
+            <span class="tag">FlutterFlow</span>
+            <span class="tag">Local DB</span>
+            <span class="tag">Firestore</span>
+            <span class="tag">Offline-first</span>
+            <span class="tag">FCM</span>
+          </div>
+          
+          <a href="https://play.google.com/store/apps/details?id=com.tsm.bookseva" 
+             target="_blank" class="btn-primary" style="margin-top: 20px;">
+            View on Play Store
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3 20.5V3.5C3 2.91 3.34 2.5 3.78 2.5L15.63 12.33L3.78 22.5C3.34 22.5 3 22.09 3 21.5V20.5ZM17.75 15.75L21.34 17.86L15.64 12.33L17.75 15.75ZM21.34 6.14L17.75 8.25L15.64 11.67L21.34 6.14ZM5.54 2.5L15.64 11.67L12.25 12.33L5.54 2.5Z"/>
+            </svg>
+          </a>
+        </div>
 
-    <h3>Tech Stack</h3>
-    <p class="muted">FlutterFlow · Firestore · Local DB · FCM · Dart Custom Functions</p>
+        <div class="detail-gallery">
+          <img src="../assets/screenshots/seva-book/01-home.png" alt="Seva Book Home Screen">
+          <img src="../assets/screenshots/seva-book/02-records.png" alt="Records View">
+        </div>
 
-    <h3>Screenshots</h3>
-    <div class="gallery">
-      <img src="../assets/screenshots/seva-book/01-home.png" alt="home">
-      <img src="../assets/screenshots/seva-book/02-records.png" alt="records">
-    </div>
+        <h2>Project Overview</h2>
+        <p>Seva Book is a digital teacher service log app that replaces paper diaries with an easy-to-use digital record of service/attendance entries. Built for educational institutions with privacy-first design and offline capabilities.</p>
 
-    <p style="margin-top:18px"><a href="https://play.google.com/store/apps/details?id=com.tsm.bookseva" target="_blank" class="btn">Open on Play Store</a></p>
+        <h3>Key Features</h3>
+        <ul>
+          <li>Teacher/service record display with clean, intuitive UI</li>
+          <li>Local database to store records for offline viewing</li>
+          <li>Automatic sync with Firestore when online</li>
+          <li>Push notifications for announcements (FCM)</li>
+          <li>Privacy-first design with no third-party data sharing</li>
+          <li>Fast listing and search of service records</li>
+          <li>Export functionality for record sharing</li>
+          <li>User-friendly interface for non-technical users</li>
+        </ul>
+
+        <h3>Technical Implementation</h3>
+        <p><strong>UI & Navigation:</strong> Created responsive layouts in FlutterFlow with custom widgets for record cards and dynamic lists.</p>
+        <p><strong>Custom Functions:</strong> Developed Dart functions to transform and filter records, including date-logic and history aggregation algorithms.</p>
+        <p><strong>Offline-first Architecture:</strong> Implemented local database storage using SQLite patterns with conflict resolution and intelligent sync logic.</p>
+        <p><strong>Firebase Integration:</strong> Hooked up Firebase Authentication (optional) and Cloud Firestore for remote record storage with real-time updates.</p>
+        <p><strong>Notifications:</strong> Implemented FCM for announcements, updates, and in-app notifications with customizable channels.</p>
+
+        <h3>My Role (End-to-End Development)</h3>
+        <ul>
+          <li>Implemented complete UI screens and responsive layouts in FlutterFlow</li>
+          <li>Built Custom Widgets for reusable record cards and dynamic list components</li>
+          <li>Developed Custom Functions for record transformation, filtering, and aggregation</li>
+          <li>Integrated local database with offline-first architecture and sync logic</li>
+          <li>Implemented Firebase Authentication and Firestore for cloud data storage</li>
+          <li>Added FCM notifications for announcements and real-time updates</li>
+          <li>Handled Android build pipeline (AAB), Play Console setup, and app signing</li>
+          <li>Conducted device testing and user-flow optimizations for smooth UX</li>
+          <li>Managed release cycles including staged rollouts and updates</li>
+        </ul>
+
+        <h3>Tech Stack Used</h3>
+        <div class="tech-stack">
+          <div class="tech-list">
+            <span class="tech-item">FlutterFlow</span>
+            <span class="tech-item">Dart Custom Functions</span>
+            <span class="tech-item">Firebase Firestore</span>
+            <span class="tech-item">Local DB (SQLite)</span>
+            <span class="tech-item">FCM</span>
+            <span class="tech-item">Firebase Auth</span>
+            <span class="tech-item">Play Console</span>
+            <span class="tech-item">GitHub</span>
+          </div>
+        </div>
+
+        <h3>Challenges & Solutions</h3>
+        <p><strong>Challenge:</strong> Implementing reliable offline sync with conflict resolution for multiple device usage.</p>
+        <p><strong>Solution:</strong> Created a timestamp-based sync system with conflict detection and user prompts for resolution. Implemented background sync when network available.</p>
+
+        <p><strong>Challenge:</strong> Ensuring data privacy and security for sensitive teacher records.</p>
+        <p><strong>Solution:</strong> Implemented local encryption for stored data, secure Firebase rules, and optional biometric authentication for app access.</p>
+
+        <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border-color);">
+          <a href="../index.html" class="btn-secondary">← Back to Portfolio</a>
+          <a href="https://play.google.com/store/apps/details?id=com.tsm.bookseva" 
+             target="_blank" class="btn-primary" style="margin-left: 20px;">
+            View on Play Store
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <a href="../index.html" class="logo">FlutterFlow Dev</a>
+            <p>Building production-ready mobile apps</p>
+          </div>
+          <div class="footer-copyright">
+            <p>© 2024 Your Name. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
+
   <script src="../script.js"></script>
 </body>
 </html>
