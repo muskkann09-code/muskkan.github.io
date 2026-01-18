@@ -1,41 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport"content="width=device-width,initial-scale=1">
-  <title>Digital Gram — Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MIST Migration — Project Details</title>
   <link rel="stylesheet" href="../style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="project-detail">
-    <a href="../index.html">← Back to portfolio</a>
-    <h1>Digital Gram</h1>
-    <p class="muted">Document management app with category & year-wise organization and instant search.</p>
+  <div class="site">
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-content">
+          <div class="brand">
+            <a href="../index.html" class="logo">← Back to Portfolio</a>
+          </div>
+          <div class="nav-actions">
+            <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-    <h3>Key Features</h3>
-    <ul>
-      <li>Category-based navigation</li>
-      <li>Year-wise document filtering</li>
-      <li>Fast in-app text search inside documents</li>
-      <li>Offline viewing & caching support</li>
-    </ul>
+    <main class="project-detail">
+      <div class="container">
+        <a href="../index.html" class="back-link">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M15.833 10H4.16699" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.16699 15L4.16699 10L9.16699 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Back to Portfolio
+        </a>
 
-    <h3>Technical Implementation</h3>
-    <p>Implemented UI with FlutterFlow, created custom indexing functions for text search, integrated Firestore/Storage or REST sources for document metadata, and built a local caching layer for offline speed.</p>
+        <h1>MIST Migration Students</h1>
+        <p class="muted">Student management system with attendance tracking, report generation, and offline data capture for educational institutions.</p>
 
-    <h3>My Role</h3>
-    <p>Complete UI, custom functions for search indexing, API/Firestore integration, offline cache & Play Store deployment.</p>
+        <div class="project-meta">
+          <div class="meta-tags">
+            <span class="tag">FlutterFlow</span>
+            <span class="tag">Attendance System</span>
+            <span class="tag">Reporting</span>
+            <span class="tag">Offline Capture</span>
+            <span class="tag">Firebase</span>
+          </div>
+          
+          <a href="https://play.google.com/store/apps/details?id=com.tsm.migrationkolhapur" 
+             target="_blank" class="btn-primary" style="margin-top: 20px;">
+            View on Play Store
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3 20.5V3.5C3 2.91 3.34 2.5 3.78 2.5L15.63 12.33L3.78 22.5C3.34 22.5 3 22.09 3 21.5V20.5ZM17.75 15.75L21.34 17.86L15.64 12.33L17.75 15.75ZM21.34 6.14L17.75 8.25L15.64 11.67L21.34 6.14ZM5.54 2.5L15.64 11.67L12.25 12.33L5.54 2.5Z"/>
+            </svg>
+          </a>
+        </div>
 
-    <h3>Tech Stack</h3>
-    <p class="muted">FlutterFlow · PDF Viewer · Cloud Firestore / REST · Local DB · FCM</p>
+        <div class="detail-gallery">
+          <img src="../assets/screenshots/mist-migration/01-student-list.png" alt="Student List Screen">
+          <img src="../assets/screenshots/mist-migration/02-attendance.png" alt="Attendance Tracking">
+          <img src="../assets/screenshots/mist-migration/03-report.png" alt="Report Generation">
+        </div>
 
-    <h3>Screenshots</h3>
-    <div class="gallery">
-      <img src="../assets/screenshots/digital-gram/01-home.png" alt="home">
-      <img src="../assets/screenshots/digital-gram/02-document-view.png" alt="document view">
-    </div>
+        <h2>Project Overview</h2>
+        <p>MIST helps teachers and administrators manage student records, attendance tracking, and report generation through an intuitive mobile interface. Built for educational institutions with varying levels of internet connectivity.</p>
 
-    <p style="margin-top:18px"><a href="https://play.google.com/store/apps/details?id=com.tsm.digitalgram" target="_blank" class="btn">Open on Play Store</a></p>
+        <h3>Key Features</h3>
+        <ul>
+          <li>Student profile creation, editing, and management</li>
+          <li>Attendance marking with bulk operations and quick actions</li>
+          <li>Attendance tracking with visual calendars and statistics</li>
+          <li>Report generation in multiple formats (PDF, Excel, CSV)</li>
+          <li>Offline data capture with automatic sync when online</li>
+          <li>Simple, intuitive UI designed for non-technical users</li>
+          <li>Class and section management for organizing students</li>
+          <li>Data export and sharing capabilities</li>
+          <li>Admin dashboard for overview and analytics</li>
+        </ul>
+
+        <h3>Technical Implementation</h3>
+        <p><strong>UI & Navigation:</strong> Implemented complete UI including student lists, attendance screens, and reports using FlutterFlow with custom data visualization.</p>
+        <p><strong>Attendance System:</strong> Built Custom Widgets for attendance marking with bulk operations, calendar views, and statistics display.</p>
+        <p><strong>Reporting Engine:</strong> Wrote Custom Functions for attendance calculations, report aggregation, and export logic with multiple format support.</p>
+        <p><strong>Offline Architecture:</strong> Integrated local database for offline attendance capture with intelligent conflict resolution and background sync.</p>
+        <p><strong>Cloud Integration:</strong> Implemented Firebase Authentication and Cloud Firestore for persistent records with real-time updates.</p>
+
+        <h3>My Role (End-to-End Development)</h3>
+        <ul>
+          <li>Implemented complete UI/UX for student management and attendance tracking</li>
+          <li>Built Custom Widgets for student cards, attendance controls, and calendar views</li>
+          <li>Wrote Custom Functions for attendance calculations, report generation, and data export</li>
+          <li>Integrated local database with offline-first architecture for field data capture</li>
+          <li>Implemented Firebase Authentication and Firestore for cloud data persistence</li>
+          <li>Added FCM notifications for admin alerts, reminders, and updates</li>
+          <li>Managed AAB builds, Play Console configurations, and staged release cycles</li>
+          <li>Performed cross-device testing and optimized for various screen sizes</li>
+          <li>Implemented analytics tracking and monitoring for usage patterns</li>
+          <li>Provided post-release support including bug fixes and feature updates</li>
+        </ul>
+
+        <h3>Tech Stack Used</h3>
+        <div class="tech-stack">
+          <div class="tech-list">
+            <span class="tech-item">FlutterFlow</span>
+            <span class="tech-item">Dart Custom Functions</span>
+            <span class="tech-item">Local DB (Offline Storage)</span>
+            <span class="tech-item">Cloud Firestore</span>
+            <span class="tech-item">Firebase Auth</span>
+            <span class="tech-item">FCM</span>
+            <span class="tech-item">Reporting Engine</span>
+            <span class="tech-item">Play Console</span>
+            <span class="tech-item">Excel/PDF Export</span>
+          </div>
+        </div>
+
+        <h3>Challenges & Solutions</h3>
+        <p><strong>Challenge:</strong> Handling attendance for large numbers of students with quick, efficient UI.</p>
+        <p><strong>Solution:</strong> Implemented virtualized lists, bulk operations, and keyboard shortcuts for rapid attendance marking.</p>
+
+        <p><strong>Challenge:</strong> Generating complex reports with aggregated data across multiple time periods.</p>
+        <p><strong>Solution:</strong> Created a reporting engine with pre-aggregated data and cached results for frequently accessed reports.</p>
+
+        <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border-color);">
+          <a href="../index.html" class="btn-secondary">← Back to Portfolio</a>
+          <a href="https://play.google.com/store/apps/details?id=com.tsm.migrationkolhapur" 
+             target="_blank" class="btn-primary" style="margin-left: 20px;">
+            View on Play Store
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <a href="../index.html" class="logo">FlutterFlow Dev</a>
+            <p>Building production-ready mobile apps</p>
+          </div>
+          <div class="footer-copyright">
+            <p>© 2024 Your Name. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
+
   <script src="../script.js"></script>
 </body>
 </html>
