@@ -1,29 +1,35 @@
+/* ================= VARIABLES ================= */
 :root {
-  --bg: #0b0d10;
-  --card: rgba(255,255,255,0.06);
-  --text: #ffffff;
-  --muted: #a1a1aa;
+  --bg-dark: #0b0d10;
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --text-main: #ffffff;
+  --text-muted: #a1a1aa;
   --accent: #6ee7b7;
 }
 
+/* ================= RESET ================= */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+/* ================= BODY ================= */
 body {
-  margin: 0;
   font-family: 'Inter', sans-serif;
-  background: var(--bg);
-  color: var(--text);
+  background: var(--bg-dark);
+  color: var(--text-main);
   line-height: 1.6;
 }
 
+/* ================= SECTIONS ================= */
 section {
-  padding: 80px 20px;
   max-width: 1000px;
   margin: auto;
+  padding: 80px 20px;
 }
 
+/* ================= HERO ================= */
 .hero {
   height: 100vh;
   display: flex;
@@ -34,46 +40,98 @@ section {
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;
+  font-weight: 700;
 }
 
+.hero p {
+  color: var(--text-muted);
+  margin-top: 12px;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 16px;
+}
+
+/* ================= BUTTONS ================= */
 .btn {
-  margin-top: 20px;
-  padding: 12px 24px;
+  padding: 12px 26px;
   border-radius: 30px;
   background: white;
   color: black;
   text-decoration: none;
+  font-weight: 600;
 }
 
-.secondary {
+.btn.outline {
   background: transparent;
-  border: 1px solid white;
   color: white;
+  border: 1px solid white;
 }
 
-.projects {
+/* ================= PROJECTS ================= */
+.project-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
 }
 
 .project-card {
-  background: var(--card);
-  border-radius: 22px;
+  background: var(--card-bg);
   padding: 28px;
+  border-radius: 22px;
   border: 1px solid rgba(255,255,255,0.08);
   transition: all 0.35s ease;
 }
 
 .project-card:hover {
   transform: translateY(-10px);
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.12);
 }
 
+.project-card p {
+  color: var(--text-muted);
+  margin: 10px 0 14px;
+}
+
+.project-card a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ================= CONTACT ================= */
+form {
+  max-width: 500px;
+  display: grid;
+  gap: 14px;
+}
+
+input, textarea {
+  padding: 14px;
+  border-radius: 12px;
+  background: #1a1a1a;
+  border: none;
+  color: white;
+}
+
+button {
+  padding: 14px;
+  border-radius: 22px;
+  border: none;
+  background: white;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ================= ANIMATIONS ================= */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
-  transition: all 0.8s ease;
+  transition: all 0.9s ease;
 }
 
 .reveal.active {
@@ -81,32 +139,9 @@ section {
   transform: translateY(0);
 }
 
-/* CONTACT FORM */
-form {
-  display: grid;
-  gap: 12px;
-  max-width: 500px;
-}
-
-input, textarea {
-  padding: 12px;
-  border-radius: 10px;
-  border: none;
-  background: #1e1e1e;
-  color: white;
-}
-
-button {
-  padding: 12px;
-  border-radius: 20px;
-  background: white;
-  color: black;
-  border: none;
-}
-
-/* MOBILE */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
 }
