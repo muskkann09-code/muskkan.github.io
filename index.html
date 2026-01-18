@@ -1,256 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlutterFlow Developer Portfolio</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #007bff;
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-        section {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h2 {
-            color: #007bff;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
-        }
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
-        .project {
-            margin-bottom: 40px;
-        }
-        .project h3 {
-            color: #333;
-        }
-        .project a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        .project a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #007bff;
-            color: white;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FlutterFlow Developer — Portfolio</title>
+  <meta name="description" content="FlutterFlow Developer — UI, custom functions, APIs, Firebase, offline DB, FCM, Play Store deployments" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <meta property="og:title" content="FlutterFlow Developer Portfolio" />
+  <meta property="og:description" content="Production FlutterFlow apps on Google Play — UI, custom functions, Firebase, API integrations, deployments." />
+  <!-- Replace preview.png with your image path -->
+  <meta property="og:image" content="assets/preview.png" />
 </head>
 <body>
-    <header>
-        <h1>FlutterFlow Developer Portfolio</h1>
-        <p>Hi 👋<br>
-        I’m a FlutterFlow Developer who builds, ships and maintains production Android apps.<br>
-        This repo demonstrates end-to-end work on multiple Play Store apps — UI → logic → backend → deployment → post-release maintenance.<br>
-        <strong>⚠️ Source code is private. Demo videos, screenshots and Play Store links are provided for client review.</strong></p>
+  <div class="site">
+    <!-- top bar -->
+    <nav class="topbar">
+      <div class="brand">
+        <a href="/">Your Name</a>
+      </div>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <a class="btn small" href="assets/resume.pdf" download>Download Resume</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero reveal">
+      <div class="hero-inner">
+        <h1>FlutterFlow Developer</h1>
+        <p class="muted">UI • Custom Functions • Custom Widgets • API Integrations • Firebase • FCM • Deployments</p>
+
+        <div class="cta">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn outline" href="#contact">Contact</a>
+        </div>
+      </div>
     </header>
 
-    <section id="summary">
-        <h2>👨‍💻 Summary — What I deliver (End-to-End)</h2>
-        <p>I work across the whole app lifecycle:</p>
-        <ul>
-            <li>UI/UX design & implementation in <strong>FlutterFlow</strong></li>
-            <li>Custom Functions (Dart) & Custom Widgets for reusable, optimized components</li>
-            <li>REST API integrations, secure JSON handling, and authentication flows</li>
-            <li>Firebase services: Authentication, Cloud Firestore, Storage, Cloud Messaging (FCM)</li>
-            <li>Local database & offline-first features (caching, sync strategies)</li>
-            <li>In-app document viewing and full-text search (PDF/document viewers)</li>
-            <li>App building (AAB/APK), Play Store configuration, signing & releases</li>
-            <li>Post-deployment support: staged rollouts, crash monitoring, bug fixes, and updates</li>
-        </ul>
+    <!-- ABOUT -->
+    <section id="about" class="about reveal">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>I build and ship production FlutterFlow apps — I design UI, write custom functions and widgets, integrate REST APIs, implement Firebase (Auth / Firestore / Storage), handle local DB/offline sync, configure push notifications (FCM), and perform Play Store builds & deployments.</p>
+      </div>
     </section>
 
-    <section id="tech-stack">
-        <h2>🛠️ Global Tech Stack</h2>
-        <ul>
-            <li>FlutterFlow (UI, navigation, state)</li>
-            <li>Dart (Custom Functions)</li>
-            <li>Firebase (Auth, Firestore, Storage, FCM)</li>
-            <li>REST APIs (GET/POST, OAuth where needed)</li>
-            <li>Local DB (SQLite / Hive or other local storage patterns)</li>
-            <li>Play Store (AAB/APK, signing, release tracks)</li>
-            <li>Tools: GitHub, Android Studio (for builds), Play Console</li>
-        </ul>
+    <!-- PROJECTS -->
+    <section id="projects" class="projects reveal">
+      <div class="container">
+        <h2>Projects</h2>
+
+        <div class="project-grid">
+          <!-- E-School Documents -->
+          <article class="project-card">
+            <img src="assets/screenshots/eschool-documents/01-home.png" alt="E-School Documents screenshot" class="project-thumb" />
+            <div class="project-content">
+              <h3>E-School Documents</h3>
+              <p class="muted">PDF viewer + full-text search, offline caching, Firebase</p>
+              <div class="project-links">
+                <a href="projects/eschool-documents.html" class="link">Details →</a>
+                <a href="https://play.google.com/store/apps/details?id=com.app.generalregister" target="_blank" class="link">Play Store</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Seva Book -->
+          <article class="project-card">
+            <img src="assets/screenshots/seva-book/01-home.png" alt="Seva Book screenshot" class="project-thumb" />
+            <div class="project-content">
+              <h3>Seva Book</h3>
+              <p class="muted">Teacher records app — local DB & Firebase integration</p>
+              <div class="project-links">
+                <a href="projects/seva-book.html" class="link">Details →</a>
+                <a href="https://play.google.com/store/apps/details?id=com.tsm.bookseva" target="_blank" class="link">Play Store</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Digital Gram -->
+          <article class="project-card">
+            <img src="assets/screenshots/digital-gram/01-home.png" alt="Digital Gram screenshot" class="project-thumb" />
+            <div class="project-content">
+              <h3>Digital Gram</h3>
+              <p class="muted">Category-based documents with in-app search & viewer</p>
+              <div class="project-links">
+                <a href="projects/digital-gram.html" class="link">Details →</a>
+                <a href="https://play.google.com/store/apps/details?id=com.tsm.digitalgram" target="_blank" class="link">Play Store</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- MIST -->
+          <article class="project-card">
+            <img src="assets/screenshots/mist-migration/01-student-list.png" alt="MIST screenshot" class="project-thumb" />
+            <div class="project-content">
+              <h3>MIST — Migration Students</h3>
+              <p class="muted">Student attendance, reporting, offline capture</p>
+              <div class="project-links">
+                <a href="projects/mist-migration.html" class="link">Details →</a>
+                <a href="https://play.google.com/store/apps/details?id=com.tsm.migrationkolhapur" target="_blank" class="link">Play Store</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="experience">
-        <h2>📊 Experience Snapshot</h2>
-        <ul>
-            <li>Multiple production apps live on Google Play</li>
-            <li>Strong focus on document-driven, education & admin apps</li>
-            <li>Proven production deployment & release management experience</li>
-        </ul>
+    <!-- TECH STACK -->
+    <section class="stack reveal">
+      <div class="container">
+        <h2>Tech Stack</h2>
+        <p class="muted">FlutterFlow · Dart · Firebase (Auth, Firestore, Storage) · REST APIs · Local DB · FCM · AAB/APK & Play Console</p>
+      </div>
     </section>
 
-    <section id="projects">
-        <h2>📱 Projects</h2>
-        <p><em>All projects below include: <strong>UI, Custom Functions, Custom Widgets, API integrations, Local DB, Firebase (Auth/Firestore/Storage), FCM, Testing, Build & Google Play deployment, Post-release support.</strong></em><br>
-        Replace any app-specific placeholders (demo links, screenshots) with your real files.</p>
+    <!-- CONTACT -->
+    <section id="contact" class="contact reveal">
+      <div class="container">
+        <h2>Contact</h2>
 
-        <div class="project">
-            <h3>1) E-School Documents</h3>
-            <p><strong>Play Store:</strong> <a href="https://play.google.com/store/apps/details?id=com.app.generalregister" target="_blank">https://play.google.com/store/apps/details?id=com.app.generalregister</a></p>
-            <h4>Overview</h4>
-            <p>E-School Documents provides category & year-wise listing of office documents and in-app PDF viewing with full-text search. Built for quick lookup of official documents with minimal permissions.</p>
-            <h4>Key Features</h4>
-            <ul>
-                <li>Category-based document browsing</li>
-                <li>Year-wise document lists</li>
-                <li>In-app PDF viewer with text search</li>
-                <li>Lightweight UI optimized for fast load and low-end devices</li>
-            </ul>
-            <h4>My Role (Detailed)</h4>
-            <p><strong>FlutterFlow Developer (End-to-End)</strong></p>
-            <ul>
-                <li>Designed and implemented all UI screens and navigation flows using FlutterFlow.</li>
-                <li>Wrote <strong>Custom Functions (Dart)</strong> to parse and index PDF text for fast in-app search.</li>
-                <li>Created <strong>Custom Widgets</strong> for consistent document cards and viewer headers.</li>
-                <li>Integrated backend storage (Firebase Storage / or static hosting) and Firestore indexing for metadata.</li>
-                <li>Implemented local DB caching for offline access and reduced network calls.</li>
-                <li>Added FCM push notifications for content updates.</li>
-                <li>Integrated 3rd-party PDF viewer and optimized rendering for performance.</li>
-                <li>Built release bundles (AAB), configured Play Console, signed app, and managed staged rollouts & updates.</li>
-                <li>Performed crash monitoring, analytics checks, and post-release bug fixes.</li>
-            </ul>
-            <h4>Tech Stack (as used)</h4>
-            <p>FlutterFlow, Dart (Custom Functions), Firebase Storage, Cloud Firestore, Local DB (caching), PDF Viewer integration, FCM, Play Console.</p>
-            <h4>Assets / Demo</h4>
-            <ul>
-                <li>Screenshots: <code>/screenshots/eschool-documents/</code></li>
-                <li>Demo video: <code>/demo-videos/eschool-documents-demo.mp4</code> (or YouTube link)</li>
-            </ul>
-        </div>
-
-        <div class="project">
-            <h3>2) Seva Book</h3>
-            <p><strong>Play Store:</strong> <a href="https://play.google.com/store/apps/details?id=com.tsm.bookseva" target="_blank">https://play.google.com/store/apps/details?id=com.tsm.bookseva</a></p>
-            <h4>Overview</h4>
-            <p>Seva Book is a digital teacher service log app that replaces paper diaries with an easy-to-use digital record of service/attendance entries.</p>
-            <h4>Key Features</h4>
-            <ul>
-                <li>Teacher/service record display (Seva Book)</li>
-                <li>Clean UI for non-technical users</li>
-                <li>Fast listing & search of records</li>
-                <li>Privacy-focused (no third-party data sharing)</li>
-            </ul>
-            <h4>My Role (Detailed)</h4>
-            <p><strong>FlutterFlow Developer (End-to-End)</strong></p>
-            <ul>
-                <li>Implemented UI screens and responsive layouts in FlutterFlow.</li>
-                <li>Built Custom Widgets for record cards and dynamic lists.</li>
-                <li>Developed Custom Functions to transform and filter records (date-logic, history aggregation).</li>
-                <li>Integrated local DB to store records offline and sync logic with backend.</li>
-                <li>Hooked up Firebase Auth (if required by client) and Firestore for remote records.</li>
-                <li>Implemented FCM for announcements/updates and in-app notifications.</li>
-                <li>Handled Android build pipeline (AAB), Play Console setup, app signing and release management.</li>
-                <li>Conducted device testing and user-flow optimizations for smooth UX.</li>
-            </ul>
-            <h4>Tech Stack</h4>
-            <p>FlutterFlow, Dart Custom Functions, Firestore / Local DB, FCM, Play Console.</p>
-            <h4>Assets / Demo</h4>
-            <ul>
-                <li>Screenshots: <code>/screenshots/seva-book/</code></li>
-                <li>Demo video: <code>/demo-videos/seva-book-demo.mp4</code></li>
-            </ul>
-        </div>
-
-        <div class="project">
-            <h3>3) Digital Gram</h3>
-            <p><strong>Play Store:</strong> <a href="https://play.google.com/store/apps/details?id=com.tsm.digitalgram" target="_blank">https://play.google.com/store/apps/details?id=com.tsm.digitalgram</a></p>
-            <h4>Overview</h4>
-            <p>Digital Gram organizes documents into categories and years, providing instant document viewing and text search for quick information retrieval.</p>
-            <h4>Key Features</h4>
-            <ul>
-                <li>Category & year-wise document classification</li>
-                <li>In-app document viewer with full-text searching</li>
-                <li>Fast, minimal UI for quick lookups</li>
-            </ul>
-            <h4>My Role (Detailed)</h4>
-            <p><strong>FlutterFlow Developer (End-to-End)</strong></p>
-            <ul>
-                <li>Built UI/UX and navigation in FlutterFlow.</li>
-                <li>Created custom indexing functions to enable fast text search across documents.</li>
-                <li>Implemented Custom Widgets for reusable list elements and viewer controls.</li>
-                <li>Implemented REST API integrations (if external content sources used) and Firestore metadata syncing.</li>
-                <li>Developed offline-first local DB caching and sync.</li>
-                <li>Implemented FCM to notify users of new or updated documents.</li>
-                <li>Managed builds, Play Console listings, app signing, and release rollouts.</li>
-                <li>Monitored post-release analytics, crash logs, and applied fixes.</li>
-            </ul>
-            <h4>Tech Stack</h4>
-            <p>FlutterFlow, PDF/document viewer integration, Cloud Firestore or REST content source, Local DB, FCM, Play Console.</p>
-            <h4>Assets / Demo</h4>
-            <ul>
-                <li>Screenshots: <code>/screenshots/digital-gram/</code></li>
-                <li>Demo video: <code>/demo-videos/digital-gram-demo.mp4</code></li>
-            </ul>
-        </div>
-
-        <div class="project">
-            <h3>4) MIST — Migration Students</h3>
-            <p><strong>Play Store:</strong> <a href="https://play.google.com/store/apps/details?id=com.tsm.migrationkolhapur" target="_blank">https://play.google.com/store/apps/details?id=com.tsm.migrationkolhapur</a></p>
-            <h4>Overview</h4>
-            <p>MIST helps teachers/admins manage student records, attendance tracking, and attendance/report generation through an intuitive mobile interface.</p>
-            <h4>Key Features</h4>
-            <ul>
-                <li>Student profile creation & viewing</li>
-                <li>Attendance marking & tracking</li>
-                <li>Attendance & summary report generation</li>
-                <li>Simple UI to support non-technical users</li>
-            </ul>
-            <h4>My Role (Detailed)</h4>
-            <p><strong>FlutterFlow Developer (End-to-End)</strong></p>
-            <ul>
-                <li>Implemented complete UI (student lists, attendance screens, reports) using FlutterFlow.</li>
-                <li>Built Custom Widgets for student cards and attendance controls.</li>
-                <li>Wrote Custom Functions for attendance calculations, report aggregation, and export logic.</li>
-                <li>Integrated local DB for offline attendance capture and sync to Firestore.</li>
-                <li>Integrated Firebase Auth (if required) and Firestore for persistent records.</li>
-                <li>Implemented FCM notifications for admin alerts and reminders.</li>
-                <li>Managed AAB builds, Play Console configurations, app signing and staged releases.</li>
-                <li>Performed cross-device testing, fixed platform-specific issues, and released hotfixes as required.</li>
-            </ul>
-            <h4>Tech Stack</h4>
-            <p>FlutterFlow, Dart custom functions, Local DB (offline attendance), Cloud Firestore, FCM, Play Console.</p>
-            <h4>Assets / Demo</h4>
-            <ul>
-                <li>Screenshots: <code>/screenshots/mist-migration-students/</code></li>
-                <li>Demo video: <code>/demo-videos/mist-migration-students-demo.mp4</code></li>
-            </ul>
-        </div>
+        <!-- Replace formspree endpoint with your form endpoint -->
+        <form class="contact-form" action="https://formspree.io/f/xyzabcde" method="POST">
+          <label><input type="text" name="name" placeholder="Your name" required></label>
+          <label><input type="email" name="email" placeholder="Your email" required></label>
+          <label><textarea name="message" rows="6" placeholder="How can I help?" required></textarea></label>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2023 FlutterFlow Developer Portfolio. All rights reserved.</p>
+    <footer class="footer">
+      <div class="container">
+        <p class="muted">© Your Name • <a href="https://github.com/yourusername" target="_blank">GitHub</a> • <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></p>
+      </div>
     </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
