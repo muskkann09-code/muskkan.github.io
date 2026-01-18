@@ -1,79 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- BASIC SETUP -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO -->
-  <title>FlutterFlow Developer Portfolio</title>
-  <meta name="description" content="FlutterFlow developer with production apps on Google Play">
+  <!-- WEBSITE TITLE -->
+  <title>FlutterFlow Developer | Portfolio</title>
 
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- DESCRIPTION (SEO) -->
+  <meta name="description" content="FlutterFlow Developer portfolio with live Play Store apps">
+
+  <!-- GOOGLE FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
+  <!-- CSS FILE -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- HERO SECTION -->
+<!-- ================= HERO SECTION ================= -->
 <header class="hero reveal">
   <h1>FlutterFlow Developer</h1>
-  <p>UI • Custom Functions • Firebase • APIs • Deployments</p>
-  <a href="#projects" class="btn">View Projects</a>
-  <a href="assets/resume.pdf" class="btn secondary" download>Download Resume</a>
+  <p>Building production-ready apps using FlutterFlow & Firebase</p>
+
+  <div class="hero-buttons">
+    <a href="#projects" class="btn">View Projects</a>
+    <a href="assets/resume.pdf" class="btn outline" download>Download Resume</a>
+  </div>
 </header>
 
-<!-- ABOUT -->
+<!-- ================= ABOUT SECTION ================= -->
 <section class="about reveal">
   <h2>About Me</h2>
   <p>
-    I am a FlutterFlow developer with multiple production apps live on Google Play.
-    I handle complete app lifecycle including UI, logic, backend, notifications,
-    and Play Store deployments.
+    I am a FlutterFlow developer with experience building and deploying
+    real-world mobile applications. I handle UI design, custom logic,
+    Firebase integration, APIs, notifications, and Play Store deployment.
   </p>
 </section>
 
-<!-- PROJECTS -->
+<!-- ================= PROJECTS ================= -->
 <section id="projects" class="projects reveal">
   <h2>Projects</h2>
 
-  <div class="project-card">
-    <h3>E-School Documents</h3>
-    <p>PDF viewer, search, Firebase, offline support</p>
-    <a href="projects/eschool-documents.html">View Details →</a>
-  </div>
+  <div class="project-grid">
 
-  <div class="project-card">
-    <h3>Seva Book</h3>
-    <p>Teacher records, local DB, Firebase, FCM</p>
-    <a href="projects/seva-book.html">View Details →</a>
-  </div>
+    <div class="project-card">
+      <h3>E-School Documents</h3>
+      <p>PDF viewer app with search and offline support</p>
+      <a href="projects/eschool.html">View Details →</a>
+    </div>
 
-  <div class="project-card">
-    <h3>Digital Gram</h3>
-    <p>Document management & search</p>
-    <a href="projects/digital-gram.html">View Details →</a>
-  </div>
+    <div class="project-card">
+      <h3>Seva Book</h3>
+      <p>Teacher record management with Firebase</p>
+      <a href="projects/seva.html">View Details →</a>
+    </div>
 
-  <div class="project-card">
-    <h3>MIST – Migration Students</h3>
-    <p>Attendance, reports, Firebase</p>
-    <a href="projects/mist-migration.html">View Details →</a>
+    <div class="project-card">
+      <h3>Digital Gram</h3>
+      <p>Document storage and search system</p>
+      <a href="projects/digital-gram.html">View Details →</a>
+    </div>
+
+    <div class="project-card">
+      <h3>MIST – Migration Students</h3>
+      <p>Attendance and reporting app</p>
+      <a href="projects/mist.html">View Details →</a>
+    </div>
+
   </div>
 </section>
 
-<!-- TECH STACK -->
+<!-- ================= TECH STACK ================= -->
 <section class="stack reveal">
   <h2>Tech Stack</h2>
-  <p>FlutterFlow · Dart · Firebase · APIs · Local DB · FCM · Play Store</p>
+  <p>
+    FlutterFlow · Dart · Firebase · APIs · Custom Functions ·
+    Local Database · FCM · Play Store
+  </p>
 </section>
 
-<!-- CONTACT -->
+<!-- ================= CONTACT ================= -->
 <section class="contact reveal">
-  <h2>Contact</h2>
+  <h2>Contact Me</h2>
 
   <form action="https://formspree.io/f/xyzabcde" method="POST">
     <input type="text" name="name" placeholder="Your Name" required>
@@ -83,6 +95,7 @@
   </form>
 </section>
 
+<!-- JS FILE -->
 <script src="script.js"></script>
 </body>
 </html>
