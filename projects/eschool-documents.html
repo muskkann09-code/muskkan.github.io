@@ -1,25 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>E-School Documents</title>
+  <meta charset="utf-8"><meta name="viewport"content="width=device-width,initial-scale=1">
+  <title>E-School Documents — Project</title>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+  <div class="project-detail">
+    <a href="../index.html">← Back to portfolio</a>
+    <h1>E-School Documents</h1>
+    <p class="muted">PDF viewer app with text search, category & year organization, offline caching and Play Store deployment.</p>
 
-<section>
-  <h1>E-School Documents</h1>
-  <p>PDF document app with search and offline support.</p>
+    <h3>Key Features</h3>
+    <ul>
+      <li>Category & year-wise document listing</li>
+      <li>In-app PDF viewer with full-text search (custom index)</li>
+      <li>Offline caching using local DB</li>
+      <li>Firebase Storage for document hosting and Firestore metadata</li>
+      <li>FCM notifications for content updates</li>
+    </ul>
 
-  <h3>My Role</h3>
-  <p>
-    UI, custom functions, custom widgets, APIs, Firebase,
-    local DB, FCM, testing, and Play Store deployment.
-  </p>
+    <h3>Technical Implementation</h3>
+    <p>UI & navigation built in FlutterFlow. Custom Dart functions parse PDF text to build a searchable index. Firestore stores metadata; Storage holds files. Local DB (cache) ensures offline access. Integrated third-party PDF viewer and optimized rendering for low-end devices.</p>
 
-  <a href="https://play.google.com/store/apps/details?id=com.app.generalregister" target="_blank">
-    View on Play Store →
-  </a>
-</section>
+    <h3>My Role</h3>
+    <p>End-to-end: UI, custom functions, custom widgets, API & Firebase integration, local DB offline logic, FCM, performance tuning, build (AAB) & Play Store deployment, post-release monitoring & fixes.</p>
 
+    <h3>Tech Stack</h3>
+    <p class="muted">FlutterFlow · Dart (Custom functions) · Firebase Storage · Cloud Firestore · Local DB · FCM · PDF Viewer</p>
+
+    <h3>Screenshots</h3>
+    <div class="gallery">
+      <img src="../assets/screenshots/eschool-documents/01-home.png" alt="home">
+      <img src="../assets/screenshots/eschool-documents/02-categories.png" alt="categories">
+      <img src="../assets/screenshots/eschool-documents/03-pdf-view.png" alt="pdf view">
+      <img src="../assets/screenshots/eschool-documents/04-search.png" alt="search">
+    </div>
+
+    <p style="margin-top:18px"><a href="https://play.google.com/store/apps/details?id=com.app.generalregister" target="_blank" class="btn">Open on Play Store</a></p>
+  </div>
+  <script src="../script.js"></script>
 </body>
 </html>
