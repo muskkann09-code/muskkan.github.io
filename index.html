@@ -1,101 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- BASIC SETUP -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FlutterFlow Developer — Portfolio</title>
+  <meta name="description" content="FlutterFlow Developer — UI, custom functions, APIs, Firebase, offline DB, FCM, Play Store deployments" />
 
-  <!-- WEBSITE TITLE -->
-  <title>FlutterFlow Developer | Portfolio</title>
-
-  <!-- DESCRIPTION (SEO) -->
-  <meta name="description" content="FlutterFlow Developer portfolio with live Play Store apps">
-
-  <!-- GOOGLE FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- CSS FILE -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <meta property="og:title" content="FlutterFlow Developer Portfolio" />
+  <meta property="og:description" content="Production FlutterFlow apps on Google Play — UI, custom functions, Firebase, API integrations, deployments." />
+  <!-- Replace preview.png with your image path -->
+  <meta property="og:image" content="assets/preview.png" />
 </head>
-
 <body>
+  <div class="site">
+    <!-- top bar -->
+    <nav class="topbar">
+      <div class="brand">
+        <a href="/">Your Name</a>
+      </div>
 
-<!-- ================= HERO SECTION ================= -->
-<header class="hero reveal">
-  <h1>FlutterFlow Developer</h1>
-  <p>Building production-ready apps using FlutterFlow & Firebase</p>
+      <div class="nav-actions">
+        <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <a class="btn small" href="assets/resume.pdf" download>Download Resume</a>
+      </div>
+    </nav>
 
-  <div class="hero-buttons">
-    <a href="#projects" class="btn">View Projects</a>
-    <a href="assets/resume.pdf" class="btn outline" download>Download Resume</a>
+    <!-- HERO -->
+    <header class="hero reveal">
+      <div class="hero-inner">
+        <h1>FlutterFlow Developer</h1>
+        <p class="muted">UI • Custom Functions • Custom Widgets • API Integrations • Firebase • FCM • Deployments</p>
+
+        <div class="cta">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn outline" href="#contact">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="about reveal">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>I build and ship production FlutterFlow apps — I design UI, write custom functions and widgets, integrate REST APIs, implement Firebase (Auth / Firestore / Storage), handle local DB/offline sync, configure push notifications (FCM), and perform Play Store builds & deployments.</p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects reveal">
+      <div class="container">
+        <h2>Projects</h2>
+
+        <div class="project-grid">
+          <!-- E-School Documents -->
+          <article class="project-card">
+            <img src="assets/screenshots/eschool-documents/01-home.png" alt="E-School Documents screenshot" class="project-thumb" />
+            <div class="project-content">
+              <h3>E-School Documents</h3>
+              <p class="muted">PDF viewer + full-text search, offline caching, Firebase</p>
+              <div class="project-links">
+                <a href="projects/eschool-documents.html" class="link">Details →</a>
+                <a href="https://play.google.com/store/apps/details?id=com.app.generalregister" target="_blank" class="link">Play Store</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Seva Book -->
+          <article class="project-card">
+            <img src="assets/screenshots/seva-book/01-home.png" alt="Seva Book screenshot" class="project-thumb" />
+            <div class="project-content">
+              <h3>Seva Book</h3>
+              <p class="muted">Teacher records app — local DB & Firebase integration</p>
+              <div class="project-links">
+                <a href="projects/seva-book.html" class="link">Details →</a>
+                <a href="https://play.google.com/store/apps/details?id=com.tsm.bookseva" target="_blank" class="link">Play Store</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Digital Gram -->
+          <article class="project-card">
+            <img src="assets/screenshots/digital-gram/01-home.png" alt="Digital Gram screenshot" class="project-thumb" />
+            <div class="project-content">
+              <h3>Digital Gram</h3>
+              <p class="muted">Category-based documents with in-app search & viewer</p>
+              <div class="project-links">
+                <a href="projects/digital-gram.html" class="link">Details →</a>
+                <a href="https://play.google.com/store/apps/details?id=com.tsm.digitalgram" target="_blank" class="link">Play Store</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- MIST -->
+          <article class="project-card">
+            <img src="assets/screenshots/mist-migration/01-student-list.png" alt="MIST screenshot" class="project-thumb" />
+            <div class="project-content">
+              <h3>MIST — Migration Students</h3>
+              <p class="muted">Student attendance, reporting, offline capture</p>
+              <div class="project-links">
+                <a href="projects/mist-migration.html" class="link">Details →</a>
+                <a href="https://play.google.com/store/apps/details?id=com.tsm.migrationkolhapur" target="_blank" class="link">Play Store</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section class="stack reveal">
+      <div class="container">
+        <h2>Tech Stack</h2>
+        <p class="muted">FlutterFlow · Dart · Firebase (Auth, Firestore, Storage) · REST APIs · Local DB · FCM · AAB/APK & Play Console</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact reveal">
+      <div class="container">
+        <h2>Contact</h2>
+
+        <!-- Replace formspree endpoint with your form endpoint -->
+        <form class="contact-form" action="https://formspree.io/f/xyzabcde" method="POST">
+          <label><input type="text" name="name" placeholder="Your name" required></label>
+          <label><input type="email" name="email" placeholder="Your email" required></label>
+          <label><textarea name="message" rows="6" placeholder="How can I help?" required></textarea></label>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="muted">© Your Name • <a href="https://github.com/yourusername" target="_blank">GitHub</a> • <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></p>
+      </div>
+    </footer>
   </div>
-</header>
 
-<!-- ================= ABOUT SECTION ================= -->
-<section class="about reveal">
-  <h2>About Me</h2>
-  <p>
-    I am a FlutterFlow developer with experience building and deploying
-    real-world mobile applications. I handle UI design, custom logic,
-    Firebase integration, APIs, notifications, and Play Store deployment.
-  </p>
-</section>
-
-<!-- ================= PROJECTS ================= -->
-<section id="projects" class="projects reveal">
-  <h2>Projects</h2>
-
-  <div class="project-grid">
-
-    <div class="project-card">
-      <h3>E-School Documents</h3>
-      <p>PDF viewer app with search and offline support</p>
-      <a href="projects/eschool.html">View Details →</a>
-    </div>
-
-    <div class="project-card">
-      <h3>Seva Book</h3>
-      <p>Teacher record management with Firebase</p>
-      <a href="projects/seva.html">View Details →</a>
-    </div>
-
-    <div class="project-card">
-      <h3>Digital Gram</h3>
-      <p>Document storage and search system</p>
-      <a href="projects/digital-gram.html">View Details →</a>
-    </div>
-
-    <div class="project-card">
-      <h3>MIST – Migration Students</h3>
-      <p>Attendance and reporting app</p>
-      <a href="projects/mist.html">View Details →</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= TECH STACK ================= -->
-<section class="stack reveal">
-  <h2>Tech Stack</h2>
-  <p>
-    FlutterFlow · Dart · Firebase · APIs · Custom Functions ·
-    Local Database · FCM · Play Store
-  </p>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section class="contact reveal">
-  <h2>Contact Me</h2>
-
-  <form action="https://formspree.io/f/xyzabcde" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message"></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-
-<!-- JS FILE -->
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
